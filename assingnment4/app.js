@@ -73,28 +73,28 @@ function tableFunction() {
     tablePrint.innerHTML = tablePrintContent;
 }
 
-    
+
 
 // Question no  5. Write a program to print items of the following array 
 // using for loop:fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”]
 
 var fruits = ['apple', 'banana', 'mango', 'orange', 'strawberry'];
-document.querySelector('.orignalFruitsArray').innerHTML = 'Fruits: ' + fruits; 
+document.querySelector('.orignalFruitsArray').innerHTML = 'Fruits: ' + fruits;
 var newFruits = "";
 for (var i = 0; i < fruits.length; i++) {
-    if(fruits[i] == 'apple'){
+    if (fruits[i] == 'apple') {
 
-      var check =  document.querySelector('.fruit1').innerHTML = 'Element at index ' + i + ' ' + ' is Apple'
-      
+        var check = document.querySelector('.fruit1').innerHTML = 'Element at index ' + i + ' ' + ' is Apple'
+
     } else if (fruits[i] === 'banana') {
-         document.querySelector('.fruit2').innerHTML = 'Element at index ' + i + ' ' + ' is Banana'
+        document.querySelector('.fruit2').innerHTML = 'Element at index ' + i + ' ' + ' is Banana'
     } else if (fruits[i] === 'mango') {
         document.querySelector('.fruit3').innerHTML = 'Element at index ' + i + ' ' + ' is Mango'
-   } else if (fruits[i] === 'orange') {
-    document.querySelector('.fruit4').innerHTML = 'Element at index ' + i + ' ' + ' is Orange'
-} else if (fruits[i] === 'strawberry') {
-    document.querySelector('.fruit5').innerHTML = 'Element at index ' + i + ' ' + ' is Strawberry'
-}
+    } else if (fruits[i] === 'orange') {
+        document.querySelector('.fruit4').innerHTML = 'Element at index ' + i + ' ' + ' is Orange'
+    } else if (fruits[i] === 'strawberry') {
+        document.querySelector('.fruit5').innerHTML = 'Element at index ' + i + ' ' + ' is Strawberry'
+    }
     newFruits += fruits[i] + '<br/>';
 }
 document.querySelector('.answer5').innerHTML = newFruits;
@@ -110,32 +110,32 @@ document.querySelector('.answer5').innerHTML = newFruits;
 // d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
 // e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
 
-var counting1To15 =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var counting1To15 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 document.querySelector('.counting').innerHTML = 'Counting <br><br>' + counting1To15;
 
-var counting1To10 = [1,2,3,4,5,6,7,8,9,10];
+var counting1To10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 counting1To10.reverse();
 document.querySelector('.reverseCounting').innerHTML = 'Reverse<br><br>' + counting1To10;
 
 
-var evenNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var evenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 
- var checkNumber = '';
- var oddNumber = '';
+var checkNumber = '';
+var oddNumber = '';
 
- for (var i = 0; i < evenNumbers.length; i++){
-if (evenNumbers[i] % 2 === 0){
-   checkNumber += evenNumbers[i]+ ",";
+for (var i = 0; i < evenNumbers.length; i++) {
+    if (evenNumbers[i] % 2 === 0) {
+        checkNumber += evenNumbers[i] + ",";
 
-}else{
-    oddNumber += evenNumbers[i]+ ",";
+    } else {
+        oddNumber += evenNumbers[i] + ",";
+    }
+    checkNumber.split(' '),
+        document.querySelector('.evenNumber').innerHTML = 'Even <br><br>' + checkNumber;
+    document.querySelector('.oddNumber').innerHTML = 'Odd <br><br>' + oddNumber;
 }
-checkNumber.split(' '),
-document.querySelector('.evenNumber').innerHTML = 'Even <br><br>' + checkNumber;
-document.querySelector('.oddNumber').innerHTML = 'Odd <br><br>' + oddNumber;
-}
 
-var series = ['2k', '4k',  '6k', '8k', '10k', '12k', '14k', '16k', '18k', '20k']
+var series = ['2k', '4k', '6k', '8k', '10k', '12k', '14k', '16k', '18k', '20k']
 document.querySelector('.series').innerHTML = 'series <br><br>' + series;
 
 
@@ -147,24 +147,65 @@ document.querySelector('.series').innerHTML = 'series <br><br>' + series;
 // After searching, prompt the user whether the given item is
 // found in the list or not. Example:
 
-var bakeryItems = ['cake','apple pie','cookie', 'chips','patties'];
+var bakeryItems = ['cake', 'apple pie', 'cookie', 'chips', 'patties'];
 
-function bakeryFunction () {
+function bakeryFunction() {
     var bakeryInput = document.querySelector('#bakeryInput').value;
-   bakeryInput = bakeryInput.toLowerCase();
+    bakeryInput = bakeryInput.toLowerCase();
 
-    console.log (bakeryInput);
+    console.log(bakeryInput);
 
-    for (var i = 0; i < bakeryItems.length; i++){
+    for (var i = 0; i < bakeryItems.length; i++) {
 
-    if (bakeryItems[i] === bakeryInput){
-        found = true;
-        document.querySelector('.bakery').innerHTML = bakeryInput + 'is <b>Available</b> at index no ' + i;
-        break;
-    } else  {
-        document.querySelector('.bakery').innerHTML = 'We are sorry, ' + bakeryInput + ' <b>not available</b> in our bakery';
+        if (bakeryItems[i] === bakeryInput) {
+            found = true;
+            document.querySelector('.bakery').innerHTML = bakeryInput + 'is <b>Available</b> at index no ' + i;
+            break;
+        } else {
+            document.querySelector('.bakery').innerHTML = 'We are sorry, ' + bakeryInput + ' <b>not available</b> in our bakery';
+        }
     }
-    
-  }
-
 }
+
+// Question no 8. Write a program to identify the largest number in the given array.
+// A = [24, 53, 78, 91, 12].
+
+
+var maxNumber =[24, 53, 78, 91, 12];
+document.querySelector(".maxNumber").innerHTML = `Array items: ` + maxNumber;
+var found = (Math.max.apply(null, maxNumber));
+document.querySelector(".foundMaxNumber").innerHTML = `The largest number is: ` + found;
+
+// can be do by this
+// for (var i = 0; i < maxNumber.length; i++){
+//     if (maxNumber[i] > found) {
+//         found = maxNumber[i]; 
+//     }
+// }
+// 
+
+
+// Question no 9. Write a program to identify the smallest number in the given array.
+// A = [24, 53, 78, 91, 12]
+
+var minNumbers =[24, 53, 78, 91, 12];
+document.querySelector(".minNumber").innerHTML = `Array items: ` + minNumbers;
+
+ var minFound =(Math.min.apply(null, minNumbers));
+ document.querySelector(".foundMinNumber").innerHTML = `The smallest number is: ` + minFound;
+
+
+//  Question no 10. Write a program to print multiples of 5 ranging 1 to 100.
+
+var ranging = '';
+
+
+for (var i = 5; i <= 100; i++){
+    if(i % 5 == 0 ){
+       
+        ranging+=(i)+ ","
+    }
+}
+ranging.split(' '),
+
+document.querySelector('.maxNumberBy5').innerHTML = ranging;

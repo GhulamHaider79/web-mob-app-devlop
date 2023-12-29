@@ -1,6 +1,17 @@
 body{
     background-color: bisque;
 }
+.navbar{
+    display: flex;
+    justify-content: end;
+}
+.navbar>h1>a{
+    text-decoration: none;
+    
+}
+.navbar>h1>a:hover{
+color: rgb(253, 162, 162);
+}
 .assignment4{
     display: flex;
     justify-content: center;
@@ -45,4 +56,12 @@ body{
     padding: 0.8rem;
     font-size: 1.5rem;
     gap: 3px;
+}
+.bottom{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: end;
+}
+.bottom>h1>a{
+    text-decoration: none;
 }
