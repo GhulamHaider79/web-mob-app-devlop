@@ -209,3 +209,28 @@ for (var i = 5; i <= 100; i++){
 ranging.split(' '),
 
 document.querySelector('.maxNumberBy5').innerHTML = ranging;
+
+
+
+// chapter No 21 to 25 
+
+// Question no 1. Write a program that takes two user inputs for first and 
+// last name using prompt and merge them in a new variable 
+// titled fullName. Greet the user using his full name.
+
+var firstName = prompt("Enter your first name", 'adam');
+var lastName = prompt("Enter your last name", 'john');
+
+var capitalize = firstName.charAt(0).toLocaleUpperCase() + firstName.slice(1);
+var capitalizeLast = lastName.charAt(0).toLocaleUpperCase() + lastName.slice(1);
+
+var fullName = capitalize + " " + capitalizeLast;
+
+alert('welcome ' + fullName);
+document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
+
+
+
+
+// Question no 2. Write a program to take a user input about his favorite 
+// mobile phone model. Find and display the length of user input in your browser
