@@ -217,7 +217,7 @@ document.querySelector('.maxNumberBy5').innerHTML = ranging;
 // Question no 1. Write a program that takes two user inputs for first and 
 // last name using prompt and merge them in a new variable 
 // titled fullName. Greet the user using his full name.
-
+function checkAnswer(){
 var firstName = prompt("Enter your first name", 'adam');
 var lastName = prompt("Enter your last name", 'john');
 
@@ -229,7 +229,7 @@ var fullName = capitalize + " " + capitalizeLast;
 alert('welcome ' + fullName);
 document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
 
-
+}
 
 
 // Question no 2. Write a program to take a user input about his favorite 

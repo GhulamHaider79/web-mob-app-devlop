@@ -1,34 +1,52 @@
 body{
     background-color: bisque;
+    background-image: url(./images/artificial-intelligence-3382507_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1px)
 }
-.course-heading-container{
-    width: 100%;
+.main-div{
     display: flex;
-    justify-content: center;
-   
-}
-.course-heading-container>h1{
-    color: #353434;
-   
-}
-.course-heading-assignment{
-    width: 100%;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 4rem;
-}
-.course-heading-assignment>div>button{
-    padding: 0.5rem;
-    border-radius: 10px;
+    gap: 2rem;
+    }
+    
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
     
 }
-.course-heading-assignment>div>button>a{
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+.course-heading-container{
+    width: 70%;
+    background-color: rgba(240, 248, 166, 0.8);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.course-heading-container>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.course-heading-container>h1{
+    color: #0b0a0a;
+   
+   
+}
+/* .course-heading-container>ul>li{
+    list-style: none;
+} */
+.course-heading-container>ul>li>a{
+ text-decoration: none;
+ color: #0b0a0a;
+ font-size: 2rem;
+ font-weight: bold;
+}
+.course-heading-container>ul>li>a:hover{
+    color: red;
 }
 
 
