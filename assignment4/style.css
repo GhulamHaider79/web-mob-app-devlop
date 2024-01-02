@@ -51,7 +51,7 @@ color: rgb(253, 162, 162);
     width: 10rem;
     font-size: 1.5rem;
 }
-#bakeryInput{
+#bakeryInput, #findingLength{
     
     width: 25rem;
     padding: 0.8rem;

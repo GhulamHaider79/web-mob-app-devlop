@@ -234,3 +234,126 @@ document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
 
 // Question no 2. Write a program to take a user input about his favorite 
 // mobile phone model. Find and display the length of user input in your browser
+
+
+function favorite () {
+var findLength = document.querySelector('#findingLength').value;
+
+var lengthFound = findLength.length;
+
+document.querySelector('.answer2Chapter21').innerHTML = 'My Favorite Phone is: ' + findLength + "</br>" + " Length of string is: " +  lengthFound;
+
+}
+
+
+// Question no 3. Write a program to find the index of letter “n” in the word
+//  “Pakistani” and display the result in your browser .
+
+var  nationality = ("pakistani");
+
+var findIndex = nationality.indexOf('n');
+
+document.querySelector('.answer3Chapter21').innerHTML = "String " +  nationality + "</br> " + "Index of 'n'  " + findIndex;
+
+
+// Question No 4. Write a program to find the last index of letter “l” in the 
+//  word “Hello World” and display the result in your browser.
+
+var massage = "Hello World";
+
+var massageLastIndex = massage.lastIndexOf("l");
+
+document.querySelector('.answer4Chapter21').innerHTML = "String " +  massage + "</br> " + "Last Index of 'l'  " + massageLastIndex;
+
+
+
+// Question no 5. Write a program to find the character at 3rd index in the 
+//  word “Pakistani” and display the result in your browser.
+
+var str = ("Pakistani");
+
+var strFound = str.charAt("3");
+document.querySelector('.answer5Chapter21').innerHTML = "String " +  str + "</br> " + "Character at index 3:  " + strFound ;
+
+
+// Question no 6. Repeat Q1 using string concat() method
+
+function checkAnswerQ6(){
+    var firstName = prompt("Enter your first name", 'adam');
+    var lastName = prompt("Enter your last name", 'john');
+    
+    var capitalize = firstName.charAt(0).toLocaleUpperCase() + firstName.slice(1);
+    var capitalizeLast = lastName.charAt(0).toLocaleUpperCase() + lastName.slice(1);
+    
+    var fullName = capitalize.concat( " ",  capitalizeLast);
+    
+    alert('welcome ' + fullName);
+    document.querySelector(".answer6Chapter21").innerHTML = 'welcome: ' + fullName;
+    
+    }
+
+
+    // Question no 7. Write a program to replace the “Hyder” to “Islam” in the 
+//  word “Hyderabad” and display the result in your browser.
+
+var city = ("Hyderabad");
+
+var cityChange = city.replace("Hyder", "Islam");
+
+document.querySelector(".answer7Chapter21").innerHTML = 'City: ' + city + "<br>" + "After replacement: " + cityChange;
+
+
+// Question no 8. Write a program to replace all occurrences of “and” in the
+// string with “&” and display the result in your browser.
+// var message = “Ali and Sami are best friends. They play cricket and 
+// football together.”;
+
+var message2 = ("Ali and Sami are best friends. They play cricket and football together.");
+
+var changesOfAnd = message2.replace(/and/g, "&") ;
+
+document.querySelector(".answer8Chapter21").innerHTML = 'String: ' + message2 + "<br> <br>" + "After: " + changesOfAnd;
+
+
+// Question no 9. Write a program that converts a string “472” to a number 
+//  472. Display the values & types in your browser.
+
+var changingNumber = ('472');
+
+var typeStr = (typeof changingNumber);
+
+
+var changedNumber = parseInt(changingNumber);
+
+var typeNum = (typeof changedNumber);
+
+
+
+document.querySelector(".answer9Chapter21").innerHTML = "Value: " + changingNumber + "<br> <br>" + "Type: " + typeStr + "<br> <br>" + "Value: " + changedNumber + "<br> <br>" + "Type: " + typeNum;
+
+
+
+// question no 10. Write a program that takes user input. Convert and show the input in capital letters.
+
+function changeCase() {
+var changeLetter =document.querySelector("#changeCase").value;
+
+var changeToCap = changeLetter.toLocaleUpperCase();
+
+var checked = document.querySelector(".answer10Chapter21").innerHTML = "User input: " + changeLetter + "<br>" + "Upper Case: " + changeToCap;
+
+}
+
+
+// Question no 11. Write a program that takes user input. Convert and show the input in title case.
+
+function changeTitleCase(){
+    var changeToTitle =document.querySelector("#changeTitleCase").value;
+
+var changeToTitleCap = changeToTitle.charAt(0).toLocaleUpperCase() + changeToTitle.slice(1);
+
+var checked = document.querySelector(".answer11Chapter21").innerHTML = "User input: " + changeToTitle + "<br>" + "Title Case: " + changeToTitleCap ;
+}
+
+
+
