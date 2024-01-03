@@ -171,7 +171,7 @@ function bakeryFunction() {
 // A = [24, 53, 78, 91, 12].
 
 
-var maxNumber =[24, 53, 78, 91, 12];
+var maxNumber = [24, 53, 78, 91, 12];
 document.querySelector(".maxNumber").innerHTML = `Array items: ` + maxNumber;
 var found = (Math.max.apply(null, maxNumber));
 document.querySelector(".foundMaxNumber").innerHTML = `The largest number is: ` + found;
@@ -188,11 +188,11 @@ document.querySelector(".foundMaxNumber").innerHTML = `The largest number is: ` 
 // Question no 9. Write a program to identify the smallest number in the given array.
 // A = [24, 53, 78, 91, 12]
 
-var minNumbers =[24, 53, 78, 91, 12];
+var minNumbers = [24, 53, 78, 91, 12];
 document.querySelector(".minNumber").innerHTML = `Array items: ` + minNumbers;
 
- var minFound =(Math.min.apply(null, minNumbers));
- document.querySelector(".foundMinNumber").innerHTML = `The smallest number is: ` + minFound;
+var minFound = (Math.min.apply(null, minNumbers));
+document.querySelector(".foundMinNumber").innerHTML = `The smallest number is: ` + minFound;
 
 
 //  Question no 10. Write a program to print multiples of 5 ranging 1 to 100.
@@ -200,15 +200,15 @@ document.querySelector(".minNumber").innerHTML = `Array items: ` + minNumbers;
 var ranging = '';
 
 
-for (var i = 5; i <= 100; i++){
-    if(i % 5 == 0 ){
-       
-        ranging+=(i)+ ","
+for (var i = 5; i <= 100; i++) {
+    if (i % 5 == 0) {
+
+        ranging += (i) + ","
     }
 }
 ranging.split(' '),
 
-document.querySelector('.maxNumberBy5').innerHTML = ranging;
+    document.querySelector('.maxNumberBy5').innerHTML = ranging;
 
 
 
@@ -217,17 +217,17 @@ document.querySelector('.maxNumberBy5').innerHTML = ranging;
 // Question no 1. Write a program that takes two user inputs for first and 
 // last name using prompt and merge them in a new variable 
 // titled fullName. Greet the user using his full name.
-function checkAnswer(){
-var firstName = prompt("Enter your first name", 'adam');
-var lastName = prompt("Enter your last name", 'john');
+function checkAnswer() {
+    var firstName = prompt("Enter your first name", 'adam');
+    var lastName = prompt("Enter your last name", 'john');
 
-var capitalize = firstName.charAt(0).toLocaleUpperCase() + firstName.slice(1);
-var capitalizeLast = lastName.charAt(0).toLocaleUpperCase() + lastName.slice(1);
+    var capitalize = firstName.charAt(0).toLocaleUpperCase() + firstName.slice(1);
+    var capitalizeLast = lastName.charAt(0).toLocaleUpperCase() + lastName.slice(1);
 
-var fullName = capitalize + " " + capitalizeLast;
+    var fullName = capitalize + " " + capitalizeLast;
 
-alert('welcome ' + fullName);
-document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
+    alert('welcome ' + fullName);
+    document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
 
 }
 
@@ -236,12 +236,12 @@ document.querySelector(".answer1Chapter21").innerHTML = 'welcome: ' + fullName;
 // mobile phone model. Find and display the length of user input in your browser
 
 
-function favorite () {
-var findLength = document.querySelector('#findingLength').value;
+function favorite() {
+    var findLength = document.querySelector('#findingLength').value;
 
-var lengthFound = findLength.length;
+    var lengthFound = findLength.length;
 
-document.querySelector('.answer2Chapter21').innerHTML = 'My Favorite Phone is: ' + findLength + "</br>" + " Length of string is: " +  lengthFound;
+    document.querySelector('.answer2Chapter21').innerHTML = 'My Favorite Phone is: ' + findLength + "</br>" + " Length of string is: " + lengthFound;
 
 }
 
@@ -249,11 +249,11 @@ document.querySelector('.answer2Chapter21').innerHTML = 'My Favorite Phone is: '
 // Question no 3. Write a program to find the index of letter “n” in the word
 //  “Pakistani” and display the result in your browser .
 
-var  nationality = ("pakistani");
+var nationality = ("pakistani");
 
 var findIndex = nationality.indexOf('n');
 
-document.querySelector('.answer3Chapter21').innerHTML = "String " +  nationality + "</br> " + "Index of 'n'  " + findIndex;
+document.querySelector('.answer3Chapter21').innerHTML = "String " + nationality + "</br> " + "Index of 'n'  " + findIndex;
 
 
 // Question No 4. Write a program to find the last index of letter “l” in the 
@@ -263,7 +263,7 @@ var massage = "Hello World";
 
 var massageLastIndex = massage.lastIndexOf("l");
 
-document.querySelector('.answer4Chapter21').innerHTML = "String " +  massage + "</br> " + "Last Index of 'l'  " + massageLastIndex;
+document.querySelector('.answer4Chapter21').innerHTML = "String " + massage + "</br> " + "Last Index of 'l'  " + massageLastIndex;
 
 
 
@@ -273,27 +273,27 @@ document.querySelector('.answer4Chapter21').innerHTML = "String " +  massage + "
 var str = ("Pakistani");
 
 var strFound = str.charAt("3");
-document.querySelector('.answer5Chapter21').innerHTML = "String " +  str + "</br> " + "Character at index 3:  " + strFound ;
+document.querySelector('.answer5Chapter21').innerHTML = "String " + str + "</br> " + "Character at index 3:  " + strFound;
 
 
 // Question no 6. Repeat Q1 using string concat() method
 
-function checkAnswerQ6(){
+function checkAnswerQ6() {
     var firstName = prompt("Enter your first name", 'adam');
     var lastName = prompt("Enter your last name", 'john');
-    
+
     var capitalize = firstName.charAt(0).toLocaleUpperCase() + firstName.slice(1);
     var capitalizeLast = lastName.charAt(0).toLocaleUpperCase() + lastName.slice(1);
-    
-    var fullName = capitalize.concat( " ",  capitalizeLast);
-    
+
+    var fullName = capitalize.concat(" ", capitalizeLast);
+
     alert('welcome ' + fullName);
     document.querySelector(".answer6Chapter21").innerHTML = 'welcome: ' + fullName;
-    
-    }
+
+}
 
 
-    // Question no 7. Write a program to replace the “Hyder” to “Islam” in the 
+// Question no 7. Write a program to replace the “Hyder” to “Islam” in the 
 //  word “Hyderabad” and display the result in your browser.
 
 var city = ("Hyderabad");
@@ -310,7 +310,7 @@ document.querySelector(".answer7Chapter21").innerHTML = 'City: ' + city + "<br>"
 
 var message2 = ("Ali and Sami are best friends. They play cricket and football together.");
 
-var changesOfAnd = message2.replace(/and/g, "&") ;
+var changesOfAnd = message2.replace(/and/g, "&");
 
 document.querySelector(".answer8Chapter21").innerHTML = 'String: ' + message2 + "<br> <br>" + "After: " + changesOfAnd;
 
@@ -336,23 +336,68 @@ document.querySelector(".answer9Chapter21").innerHTML = "Value: " + changingNumb
 // question no 10. Write a program that takes user input. Convert and show the input in capital letters.
 
 function changeCase() {
-var changeLetter =document.querySelector("#changeCase").value;
+    var changeLetter = document.querySelector("#changeCase").value;
 
-var changeToCap = changeLetter.toLocaleUpperCase();
+    var changeToCap = changeLetter.toLocaleUpperCase();
 
-var checked = document.querySelector(".answer10Chapter21").innerHTML = "User input: " + changeLetter + "<br>" + "Upper Case: " + changeToCap;
+    var checked = document.querySelector(".answer10Chapter21").innerHTML = "User input: " + changeLetter + "<br>" + "Upper Case: " + changeToCap;
 
 }
 
 
 // Question no 11. Write a program that takes user input. Convert and show the input in title case.
 
-function changeTitleCase(){
-    var changeToTitle =document.querySelector("#changeTitleCase").value;
+function changeTitleCase() {
+    var changeToTitle = document.querySelector("#changeTitleCase").value; // in this line i have get value using querySelector and ID and assign it new variable 
 
-var changeToTitleCap = changeToTitle.charAt(0).toLocaleUpperCase() + changeToTitle.slice(1);
+    var changeToTitleCap = changeToTitle.charAt(0).toLocaleUpperCase() + changeToTitle.slice(1); // in this line i have get first character by charAt method and convert it in capital letter and then copy the other character by using slice method 
 
-var checked = document.querySelector(".answer11Chapter21").innerHTML = "User input: " + changeToTitle + "<br>" + "Title Case: " + changeToTitleCap ;
+    var checked = document.querySelector(".answer11Chapter21").innerHTML = "User input: " + changeToTitle + "<br>" + "Title Case: " + changeToTitleCap; // this line show result in html page
+}
+
+
+// Question no 12. Write a program that converts the variable num to string.
+// var num = 35.36 ; Remove the dot to display “3536” display in your browser.
+
+var numToBeChange = 35.36; // declare a number variable 
+var numChange = numToBeChange.toString(); // in this line number variable into string variable 
+var numChanged = numChange.slice(0, 2) + numChange.slice(3); // in this line i have copy first tow and last tow character for removing dot
+document.querySelector('.answer12Chapter21').innerHTML = 'Number: ' + numToBeChange + '<br>' + 'Result: ' + numChanged;
+
+
+// question no 13. Write a program to take user input and store username 
+// in a variable. If the username contains any special symbol 
+// among [@ . , !], prompt the user to enter a valid username. 
+// For character codes of [@ .
+// Note:
+// ASCII code of ! is 33
+// ASCII code of , is 44
+// ASCII code of . is 46
+// ASCII code of @ is 64
+
+
+
+function changeSpecialCharacter() {    // in this line declare a funtion
+    var changeSpecialCharacter = document.querySelector('#changeSpecialCharacter').value  // in this line get value form html page by id
+
+    var specialCharacterCodes = [33, 44, 46, 64]; // in this line use array for store code number of special characters
+
+    for (var i = 0; i < changeSpecialCharacter.length; i++) { // for loop for check each alphabets 
+
+
+        var asciiCode = changeSpecialCharacter.charCodeAt(i); // in this line covert alphabet in ASCII (American Standard Code for Information Interchange). in charCodeAt(i) i use for convert each alphabet
+
+        for (var j = 0; j < specialCharacterCodes.length; j++) { // nested loop for comparing ASCII to Special character ASCII
+
+            if (specialCharacterCodes[j] === asciiCode) { // if user input equal to 33, 44, 46, 64 code function if statement run
+                alert('please enter valid user name');
+                 return; // if alert show this line will stop code to more run
+            }
+
+        }
+
+    }
+    alert('Welcome ' + changeSpecialCharacter); // if user input have not any special character this alert show on screen
 }
 
 
