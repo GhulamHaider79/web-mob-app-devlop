@@ -391,7 +391,7 @@ function changeSpecialCharacter() {    // in this line declare a funtion
 
             if (specialCharacterCodes[j] === asciiCode) { // if user input equal to 33, 44, 46, 64 code function if statement run
                 alert('please enter valid user name');
-                 return; // if alert show this line will stop code to more run
+                return; // if alert show this line will stop code to more run
             }
 
         }
@@ -399,6 +399,64 @@ function changeSpecialCharacter() {    // in this line declare a funtion
     }
     alert('Welcome ' + changeSpecialCharacter); // if user input have not any special character this alert show on screen
 }
+
+
+
+// Question no 14. You have an array
+// A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an 
+// array. After searching, prompt the user whether the given 
+// item is found in the list or not.
+// Note: Perform case insensitive search. Whether the user 
+// enters cookie, Cookie, COOKIE or coOkIE, program 
+// should inform about its availability. Example:
+
+
+function userSearch() { // Function for user search 
+    var bakeryArrays = ['cake', 'apple pie', 'cookie', 'chips', 'patties'] // array for we have item 
+
+    var userInput = document.querySelector('#userSearch').value // this line get value of user input
+
+    userInput = userInput.toLowerCase();   // convert user input to lower case for case sensitive
+
+    for (var i = 0; i < bakeryArrays.length; i++) {  // loop for check each value of array
+
+        if (userInput === bakeryArrays[i]) {   // if statement for check user input equal to our array or not 
+
+            var checkedValue = bakeryArrays[i];   // if user input equal to our array`s value it will store in new variable 
+
+            document.querySelector('.answer14Chapter21').innerHTML = checkedValue + " is available " + "At index no: " + i; // this line show result in html page
+            return;   // for break loop 
+        }else {
+
+        document.querySelector('.answer14Chapter21').innerHTML =  userInput + " not found " // if user input is not equal to our array value this line will show to user
+     
+    }
+
+    }
+
+}
+
+
+
+// Question no 15. Write a program to take password as an input from 
+// user. The password must qualify these requirements:
+// a. It should contain alphabets and numbers
+// b. It should not start with a number
+// c. It must at least 6 characters long
+// If the password does not meet above requirements,
+// prompt the user to enter a valid password.
+// For character codes of a-z, A-Z & 0-9, refer to ASCII
+// table at the end of this document.
+
+// function password(){
+//     var userPassword = document.querySelector('#').value;
+//     for ( var i = 0; i < userPassword.length; i++){
+//      var  userPasswordChar = userPassword.charCodeAt(i);
+//         if (userPasswordChar )
+//     }
+// }
+
 
 
 
