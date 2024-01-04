@@ -449,14 +449,49 @@ function userSearch() { // Function for user search
 // For character codes of a-z, A-Z & 0-9, refer to ASCII
 // table at the end of this document.
 
-// function password(){
-//     var userPassword = document.querySelector('#').value;
-//     for ( var i = 0; i < userPassword.length; i++){
-//      var  userPasswordChar = userPassword.charCodeAt(i);
-//         if (userPasswordChar )
-//     }
-// }
+function password() {
+    var userPassword = document.querySelector('#password').value;
+    var newPassword = '';
+
+    for (var i = 0; i < userPassword.length; i++) {
+        var charCode = userPassword.charCodeAt(i);
+
+        // Check if the character is a letter (a-z or A-Z) or a number (0-9)
+        if ((charCode >= 97 && charCode <= 122) || (charCode >= 65 && charCode <= 90) || (charCode >= 48 && charCode <= 57)) {
+            newPassword += userPassword[i];
+        }
+    }
+
+    // Check the length and the first character
+    if (newPassword.length >= 6 && isNaN(parseInt(newPassword[0]))) {
+        document.querySelector(".answer15Chapter21").innerHTML =  ('Your password is valid');
+    } else {
+        document.querySelector(".answer15Chapter21").innerHTML = "Your password is not valid";
+    }
+}
 
 
 
+
+// Question no 16. Write a program to convert the following string to an 
+// array using string split method.
+// var university = “University of Karachi”;
+// Display the elements of array in your browser.
+
+
+var university = "University of karachi";
+
+university = university.split(" ");
+var checkUn = typeof(university);
+
+var universityArray = [];
+
+for (var i = 0; i < university.length; i++){
+ var universityArrayCheck = university[i];
+
+ for (var j = 0; j < universityArrayCheck.length; j++){
+    universityArray += universityArrayCheck[j] + "<br>"
+ }
+}
+document.querySelector(".answer16Chapter21").innerHTML = universityArray;
 
