@@ -427,11 +427,11 @@ function userSearch() { // Function for user search
 
             document.querySelector('.answer14Chapter21').innerHTML = checkedValue + " is available " + "At index no: " + i; // this line show result in html page
             return;   // for break loop 
-        }else {
+        } else {
 
-        document.querySelector('.answer14Chapter21').innerHTML =  userInput + " not found " // if user input is not equal to our array value this line will show to user
-     
-    }
+            document.querySelector('.answer14Chapter21').innerHTML = userInput + " not found " // if user input is not equal to our array value this line will show to user
+
+        }
 
     }
 
@@ -464,7 +464,7 @@ function password() {
 
     // Check the length and the first character
     if (newPassword.length >= 6 && isNaN(parseInt(newPassword[0]))) {
-        document.querySelector(".answer15Chapter21").innerHTML =  ('Your password is valid');
+        document.querySelector(".answer15Chapter21").innerHTML = ('Your password is valid');
     } else {
         document.querySelector(".answer15Chapter21").innerHTML = "Your password is not valid";
     }
@@ -482,16 +482,165 @@ function password() {
 var university = "University of karachi";
 
 university = university.split(" ");
-var checkUn = typeof(university);
+var checkUn = typeof (university);
 
 var universityArray = [];
 
-for (var i = 0; i < university.length; i++){
- var universityArrayCheck = university[i];
+for (var i = 0; i < university.length; i++) {
+    var universityArrayCheck = university[i];
 
- for (var j = 0; j < universityArrayCheck.length; j++){
-    universityArray += universityArrayCheck[j] + "<br>"
- }
+    for (var j = 0; j < universityArrayCheck.length; j++) {
+        universityArray += universityArrayCheck[j] + "<br>"
+    }
 }
 document.querySelector(".answer16Chapter21").innerHTML = universityArray;
+
+
+
+// Question no 17. Write a program to display the last character of a user input.
+
+
+
+function lastCharacter() { // declare a function 
+    var userInputForLastChar = document.querySelector('#lastCharacter').value; // get user input for html page
+
+    var lastChar = userInputForLastChar.charAt(userInputForLastChar.length - 1); // get last character using chatAt(-1) formula
+    document.querySelector('.answer17Chapter21').innerHTML = 'User input: ' + userInputForLastChar + "<br>" + "Last character; " + lastChar; // display result in html page
+}
+
+
+
+// Question no 1. Write a program that takes a positive integer from user &
+// display the following in your browser.
+// a. number
+// b. round off value of the number
+// c. floor value of the number
+// d. ceil value of the number 
+
+function positiveNumber() { // declare a function 
+    var userNumber = document.querySelector('#floorNumber').value; // take user input by query selector 
+
+    var userNumberRound = Math.round(userNumber); // round up user input number by math.round() method 
+
+    var userNumberFloor = Math.floor(userNumber); // floor up user input number by math.floor () method 
+
+    var userNumberCeil = Math.ceil(userNumber);   // ceil up user input number by math.ceil() method
+
+    document.querySelector('.answer1Chapter26').innerHTML = 'Number: ' + userNumber + '<br>' + 'Round of value: ' + userNumberRound + "<br>" + "Floor value: " + userNumberFloor + "<br>" + "Ceil value: " + userNumberCeil; // show result in html page
+
+}
+
+
+
+// Question no 2. Write a program that takes a negative floating point
+// number from user & display the following in your browser.
+// a. number
+// b. round off value of the number
+// c. floor value of the number
+// d. ceil value of the number
+
+
+
+
+function negativeNumber() { // declare a function 
+    var userNumber2 = document.querySelector('#negativeNumber').value; // take user input by query selector 
+
+    var negativeNumberRound = Math.round(userNumber2); // round up user input number by math.round() method 
+
+    var negativeNumberFloor = Math.floor(userNumber2); // floor up user input number by math.floor () method 
+
+    var negativeNumberCeil = Math.ceil(userNumber2);   // ceil up user input number by math.ceil() method
+
+    document.querySelector('.answer2Chapter26').innerHTML = 'Number: ' + userNumber2 + '<br>' + 'Round of value: ' + negativeNumberRound + "<br>" + "Floor value: " + negativeNumberFloor + "<br>" + "Ceil value: " + negativeNumberCeil; // show result in html page
+
+}
+
+
+// Question no 3. Write a program that displays the absolute value of a number.
+// E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+
+function absoluteNumber() {
+    var absNumber = document.querySelector('#absoluteNumber').value;
+    var absNumberValue = Math.abs(absNumber); // abs method gave us absolute value like -4 to 4
+    document.querySelector('.answer3Chapter26').innerHTML = "Absolute value of " + absNumber + " " + "is " + absNumberValue;
+}
+
+
+// var checkPowMethod = Math.pow(4,2); it will returns the value of x to the power of y:   
+
+
+
+// question no 4. Write a program that simulates a dice using random() 
+// method of JS Math class. Display the value of dice in your browser.:
+
+function diceRandom() {
+    var diceArray = [1, 2, 3, 4, 5, 6,];  // declare a number array 
+
+    var diceRandom = Math.random(diceArray) * 7; // get random number from array but i will return point like (.0007) number when we multiply it with 7 it wii return 0 to 6 number but still in point like(6.001)  
+    diceRandom = Math.floor(diceRandom)  // in this line we floor down number like 6.0005 to 6 
+    document.querySelector('.answer4Chapter26').innerHTML = diceRandom; // show result in html page
+}
+
+
+// Question no 5. Write a program that simulates a coin toss using random()
+// method of JS Math class. Display the value of coin in your browser
+
+
+function coinRandom() {
+    var coinArray = [1, 2, 3, 4, 5, 6,];  // declare a number array 
+
+    var coinRandom = Math.random(coinArray) * 3; // get random number from array but i will return point like (.0007) number when we multiply it with 7 it wii return 0 to 6 number but still in point like(6.001)  
+    coinRandom = Math.floor(coinRandom)  // in this line we floor down number like 6.0005 to 6 
+    
+    if (coinRandom === 2 ){
+        document.querySelector('.answer5Chapter26').innerHTML = "Randon coin value: Head"; // show result in html page
+    }else {
+        document.querySelector('.answer5Chapter26').innerHTML = "Random coin valu: Tails"; // show result in html page
+    }
+}
+
+
+
+// Question no 6. Write a program that shows a random number between 1 and 100 in your browser.
+
+
+
+function randomNumber() {
+    var randomArray = [1, 2, 3, 4, 5, 6, 7, 8, 9,];  // declare a number array 
+
+    var random100 = Math.random(randomArray) * 100; // get random number from array but i will return point like (.0007) number when we multiply it with 7 it wii return 0 to 6 number but still in point like(6.001)  
+    random100 = Math.ceil(random100)  // in this line we floor down number like 6.0005 to 6 
+    
+    document.querySelector('.answer6Chapter26').innerHTML = "Random number between 1 to 100: " + random100; // show result in html page
+
+  
+}
+
+
+
+
+
+
+function getUserWeight() {
+    function parseWeight(input) {
+      const cleanedInput = input.replace(/[^\d.]/g, ''); // Remove non-numeric characters
+      const numericValue = parseFloat(cleanedInput); // Convert the cleaned string to a number
+      return isNaN(numericValue) ? null : numericValue; // Check if it's a valid number
+    }
+  
+    const userInput = prompt("Enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+  
+    // Parse the user input using the nested function
+    const weight = parseWeight(userInput); // The `input` argument is here
+  
+    if (weight !== null) {
+      alert("Your weight is: " + weight + " kilograms");
+    } else {
+      alert("Invalid input. Please enter a valid weight.");
+    }
+  }
+  
+  // Call the function to start the program
+  getUserWeight();
+  
 
