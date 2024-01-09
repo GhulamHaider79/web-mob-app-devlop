@@ -9,6 +9,7 @@
     width: 350px;
     border: 2px solid grey;
     padding: 8px;
+    
 }
 .navbar{
     display: flex;
@@ -26,14 +27,18 @@
     align-items: center;
 }
 .first_input{
+    margin-top: 1.5rem;
     width: 99%;
+    height: 2rem;
     padding: 5px;
-    border: 1px solid rgb(217, 216, 216);
+    text-align: end;
+    border: 1px solid rgb(217, 216, 216); 
 }
 .last_input{
     width: 99%;
-    height: 1.5rem;
+    height: 2.5rem;
     padding: 5px;
+    text-align: end;
     border: 1px solid rgb(217, 216, 216);
 }
 

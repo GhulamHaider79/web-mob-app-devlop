@@ -33,7 +33,7 @@ function button(value) {
         upDateDisplayValue()  // this is another function for display first input value to show in next input 
 
     } else if (value === 'ce') { // if this condition match 
-        
+
         calculate = '';  // whole input will empty
 
         displayValue = '';  // whole input will empty
@@ -41,7 +41,7 @@ function button(value) {
         upDateDisplayValue()  // function call
     } else {
         calculate += value;  // this line will stor value every clicks on buttons
-        
+
     }
 
     upDateDisplay(); // function call
@@ -54,7 +54,7 @@ function upDateDisplay() {  // function and function name declare
     var displayElement = document.getElementById('display'); // get element from html page and store in variable
 
     // if statement for check element fount or not fund which one we get before line
-    if (displayElement) {   
+    if (displayElement) {
         displayElement.value = calculate; // if element found then its value update by calculate variable 
     } else {
         console.error('Display element not found');
