@@ -1,0 +1,52 @@
+
+.container_main{
+    display: flex;
+    justify-content: center;
+
+}
+
+.container_calculator_body{
+    width: 350px;
+    border: 2px solid grey;
+    padding: 8px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.standard{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.input_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first_input{
+    width: 99%;
+    padding: 5px;
+    border: 1px solid rgb(217, 216, 216);
+}
+.last_input{
+    width: 99%;
+    height: 1.5rem;
+    padding: 5px;
+    border: 1px solid rgb(217, 216, 216);
+}
+
+.number_button{
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.first_row{
+    width: 85px;
+    height: 50px;
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
