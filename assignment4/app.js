@@ -619,7 +619,13 @@ function randomNumber() {
 
 
 
-
+// question no 7. Write a program that asks the user about his weight. Parse 
+// the user input and display his weight in your browser. 
+// Possible user inputs can be:
+// a. 50
+// b. 50kgs
+// c. 50.2kgs
+// d. 50.2kilograms
 
 function getUserWeight() {
     function parseWeight(input) {
@@ -640,7 +646,135 @@ function getUserWeight() {
     }
   }
   
-  // Call the function to start the program
-  getUserWeight();
+ 
+ 
   
 
+  // Question no 8. Write a program that stores a random secret number from 
+// 1 to 10 in a variable. Ask the user to input a number 
+// between 1 and 10. If the user input equals the secret 
+// number, congratulate the user.
+
+
+// function for random user input number
+function randomSecretNumber(){
+    // get user input from html form
+    var userInputNumber = document.querySelector('#randomSecretNumber').value;
+    // parseInt for user input string in number
+    userInputNumber = parseInt(userInputNumber);
+    // if condition checking 
+    if(userInputNumber === 6){
+        // show result in html page
+        document.querySelector('.answer8Chapter26').innerHTML = 'Congratulate';
+    }else {
+         // if if statement not true then this result in html page
+        document.querySelector('.answer8Chapter26').innerHTML = 'Try Again';
+    }
+}
+
+
+// chapter no 31 to 34 started 
+
+// Question no 1. Write a program that displays current date and time in your browser.
+
+
+function getCurrentDate(){
+    // get current date and stor in variable 
+ var getCurrentDate = new Date();
+ // display in html page 
+ document.querySelector('.answer1Chapter31').innerHTML = getCurrentDate;
+}
+
+
+// Question no 2. Write a program that alerts the current month in words. 
+// For example December.
+
+function getMonthInWord(){
+    // get current date 
+    var getMonthInWord = new Date();
+     // declare an array with months name
+    var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    // get current month from current date
+    var currentMonth = getMonthInWord.getMonth();
+
+     // loop for executed each months array value 
+    for (var i = 0; i < months.length; i++){
+        // if statement for checking array i and current month is equal or not 
+        if( i === currentMonth){
+            document.querySelector(".answer2Chapter31").innerHTML = months[i];
+        }
+    }
+}
+
+
+// Question no 3. Write a program that alerts the first 3 letters of the current
+//day, for example if today is Sunday then alert will show Sun.
+
+function getDayInWord(){
+    // get current date 
+    var getDayInWord = new Date();
+     // declare an array with Days name
+    var days = [ "Sun", "Mon", "Teu", "Wed", "Thur", "Fri", "Sat"]
+    // get current Day from current date
+    var currentDay = getDayInWord.getDay();
+
+     // loop for executed each Days array value 
+    for (var i = 0; i < days.length; i++){
+        // if statement for checking array i and current Day is equal or not 
+        if( i === currentDay ){
+            document.querySelector(".answer3Chapter31").innerHTML = "Today is: " + days[i];
+        }
+    }
+}
+
+
+// Question no 4. Write a program that displays a message “It’s Fun day” if 
+// its Saturday or Sunday today.
+
+function funDay(){
+    // get current date 
+    var funDay = new Date();
+     // declare an array with Days name
+    var daysFun = [ "Sun", "Mon", "Teu", "Wed", "Thur", "Fri", "Sat"]
+    // get current Day from current date
+    var currentDay = funDay.getDay();
+
+     // loop for executed each Days array value 
+    for (var i = 0; i < daysFun.length; i++){
+        // if statement for checking array i and current Day is equal or not 
+        if( currentDay === 0 || currentDay === 6 ){
+            document.querySelector(".answer4Chapter31").innerHTML = "It`s fun Day";
+        }else {
+            document.querySelector(".answer4Chapter31").innerHTML = "It`s working day";
+        }
+    }
+}
+
+
+// Question no5. Write a program that shows the message “First fifteen 
+// days of the month” if the date is less than 16th of the month 
+// else shows “Last days of the month”.
+
+
+
+
+function firstFifteenDays(){
+    // get current date 
+    var funDay = new Date();
+     
+    // get current Day from current date
+    var currentDay = funDay.getDate();
+
+    if (currentDay <= 15){
+        document.querySelector(".answer5Chapter31").innerHTML = "First Fifteen Days ";
+    }else {
+        document.querySelector(".answer5Chapter31").innerHTML = "Last days of the month";
+    }
+}
+
+
+
+// Question no 6. Write a program that determines the minutes since 
+// midnight, Jan. 1, 1970 and assigns it to a variable that 
+// hasn't been declared beforehand. Use any variable you like 
+// to represent the Date object.
