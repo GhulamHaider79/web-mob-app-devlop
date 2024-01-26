@@ -1,0 +1,131 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.main_post{
+    width: 400px;
+    border: 1px solid gray;
+display: flex;
+flex-direction: column;
+}
+.create_post{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 5px;
+    gap: 100px;
+    border-bottom: 1px solid gray;
+}
+.create_post>button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(211, 209, 209);
+    border: none;
+    font-size: 1.5rem;
+    color: gray;
+}
+.name_image{
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    padding-left: 5px;
+    align-items: center;
+}
+ .div_img {
+   margin-top: 5px;
+} 
+.div_img>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 5px;
+}
+.name>h5{
+    line-height: 0px;
+}
+.name>select{
+    width: 5rem;
+    height: 1.2rem;
+    line-height: 0px;
+    background-color: rgb(208, 207, 207);
+    border-radius: 5px;
+}
+#writePost{
+    border: none;
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+}
+#writePost:focus {
+    border: none;
+  }
+  
+  .color_section{
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    justify-content: space-between;
+    gap: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+  .color_section>div>img{
+    width: 50px;
+    height: 40px;
+    border-radius: 16%;
+    cursor: pointer;
+  }
+  
+  .color_section>div>input{
+    width: 50px;
+    height: 40px;
+    border-radius: 16%;
+    margin: 0;
+    cursor: pointer;
+  }
+  .color_section>div>button{
+    width: 50px;
+    height: 40px;
+    border-radius: 16%;
+    margin: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .emojis2{
+    display: none;
+  }
+  .emojis{
+    display: block;
+ width: 200px;
+ border: 1px solid gray;
+ padding: 2px;
+ background-color: rgb(216, 214, 214, 0.5);
+ position: absolute;
+ bottom: 0;
+ right: 2px;
+  }
+  .emojis>ul{
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    
+  }
+  .emojis>ul>li{
+    list-style: none;
+    font-size: 1.5rem;
+    
+    
+  }
