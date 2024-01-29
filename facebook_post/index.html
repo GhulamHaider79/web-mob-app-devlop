@@ -10,27 +10,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
-        integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     
-    <nav id="navbar" class="navbar navbar-befor navbar-expand-lg">
+    <nav id="navbar" class="navbar navbar-befor navbar-expand-lg bg-light-subtle  ">
         <div class="container-fluid px-4 pt-2 ">
             <a class="navbar-brand" href="#">Ghulam Haider</a>
-           <a href="../index.html" class="nav-link text-light ">Go To Home</a>
+           <a href="../index.html" class="nav-link text-dark ">Go To Home</a>
         </div>
     </nav>
 
     <div class="container">
         <div class="main_post">
             <div class="create_post">
-                <h2>Create Post </h2>
-                <button>X</button>
+                <h3>Create Post </h3>
+                <button><i class="fa-solid fa-xmark"></i></button>
             </div>
 
 
@@ -44,16 +43,26 @@
 
                 <div class="name">
                     <h5>Ghulam haider</h5>
-                    <select name="select_public" id="public">
-                        <option value="public">
-                            Public
-                        </option>
-                    </select>
+                    <div  id="public">
+                        
+                           <span> <i class="fa-solid fa-earth-oceania"></i></span> <span>Public</span> <span><i class="fa-solid fa-caret-down"></i></span>
+                        
+                    </div>
                 </div>
             </div>
 
             <textarea name="post_write" id="writePost" cols="15" rows="4" placeholder="What's on your mind"></textarea>
 
+             <div class="text_bold">
+                <ul>
+                    <li class="bold">B</li>
+                    <li class="italic">I</li>
+                    <li class="under_line">U</li>
+                    <li class="bold"><i class="fa-solid fa-align-left"></i></li>
+                    <li class="bold"><i class="fa-solid fa-align-center"></i></li>
+                    <li class="bold"><i class="fa-solid fa-align-right"></i></li>
+                </ul>
+             </div>
 
             <div class="color_section">
                 <div>
@@ -72,17 +81,17 @@
                 </div>
                 <div class="emojis2" >
                     <ul>
-                        <li class="emojiValue" value="🙂">🙂</li>
-                        <li class="emojiValue" value="😛">😛</li>
-                        <li class="emojiValue" value="😃">😃</li>
-                        <li class="emojiValue" value="😮">😮</li>
-                        <li class="emojiValue" value="😉">😉</li>
-                        <li class="emojiValue" value="🤓">🤓</li>
-                        <li class="emojiValue" value="😎">😎</li>
-                        <li class="emojiValue" value="😠">😠</li>
-                        <li class="emojiValue" value="😕">😕</li>
-                        <li class="emojiValue" value="😢">😢</li>
-                        <li class="emojiValue" value="😈">😈</li>
+                        <li class="emojiValue">🙂</li>
+                        <li class="emojiValue">😛</li>
+                        <li class="emojiValue">😃</li>
+                        <li class="emojiValue">😮</li>
+                        <li class="emojiValue">😉</li>
+                        <li class="emojiValue">🤓</li>
+                        <li class="emojiValue">😎</li>
+                        <li class="emojiValue">😠</li>
+                        <li class="emojiValue">😕</li>
+                        <li class="emojiValue">😢</li>
+                        <li class="emojiValue">😈</li>
                     </ul>
                 </div>
                 
@@ -90,6 +99,7 @@
 
             </div>
 
+            <button class="post_button">Post</button>
 
         </div>
     </div>

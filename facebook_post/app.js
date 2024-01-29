@@ -30,3 +30,17 @@ document.querySelector('.emojis2').addEventListener('click',function (e){
    
     console.log(e.target.value);
 })
+
+document.querySelector('.bold').addEventListener('click', function (e){
+    let writePostBold = document.querySelector('#writePost')
+    writePostBold.style.fontWeight = "bold"
+} )
+
+document.querySelector('.italic').addEventListener('click', function (e){
+    let writePostBold = document.querySelector('#writePost')
+    writePostBold.style.fontStyle = "italic"
+} )
+document.querySelector('.under_line').addEventListener('click', function (e){
+    let writePostBold = document.querySelector('#writePost')
+    writePostBold.style.textDecoration = "underline" 
+} )
