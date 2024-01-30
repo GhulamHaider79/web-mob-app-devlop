@@ -58,9 +58,9 @@
                     <li class="bold">B</li>
                     <li class="italic">I</li>
                     <li class="under_line">U</li>
-                    <li class="bold"><i class="fa-solid fa-align-left"></i></li>
-                    <li class="bold"><i class="fa-solid fa-align-center"></i></li>
-                    <li class="bold"><i class="fa-solid fa-align-right"></i></li>
+                    <li class="leftAlign"><i class="fa-solid fa-align-left"></i></li>
+                    <li class="centerAlign"><i class="fa-solid fa-align-center"></i></li>
+                    <li class="rightAlign"><i class="fa-solid fa-align-right"></i></li>
                 </ul>
              </div>
 
@@ -79,19 +79,19 @@
                 <div>
                     <button onclick="showEmojis()" type="button">🙂</button>
                 </div>
-                <div class="emojis2" >
+                <div id="addEmojis" class="emojis2" >
                     <ul>
-                        <li class="emojiValue">🙂</li>
-                        <li class="emojiValue">😛</li>
-                        <li class="emojiValue">😃</li>
-                        <li class="emojiValue">😮</li>
-                        <li class="emojiValue">😉</li>
-                        <li class="emojiValue">🤓</li>
-                        <li class="emojiValue">😎</li>
-                        <li class="emojiValue">😠</li>
-                        <li class="emojiValue">😕</li>
-                        <li class="emojiValue">😢</li>
-                        <li class="emojiValue">😈</li>
+                        <li class="emojiValue" onclick="addEmojis()">🙂</li>
+                        <li class="emojiValue" onclick="addEmojis()">😛</li>
+                        <li class="emojiValue" onclick="addEmojis()">😃</li>
+                        <li class="emojiValue" onclick="addEmojis()">😮</li>
+                        <li class="emojiValue" onclick="addEmojis()">😉</li>
+                        <li class="emojiValue" onclick="addEmojis()">🤓</li>
+                        <li class="emojiValue" onclick="addEmojis()">😎</li>
+                        <li class="emojiValue" onclick="addEmojis()">😠</li>
+                        <li class="emojiValue" onclick="addEmojis()">😕</li>
+                        <li class="emojiValue" onclick="addEmojis()">😢</li>
+                        <li class="emojiValue" onclick="addEmojis()">😈</li>
                     </ul>
                 </div>
                 
@@ -99,7 +99,9 @@
 
             </div>
 
+           <div class="mainPostButton">
             <button class="post_button">Post</button>
+           </div>
 
         </div>
     </div>
