@@ -1,77 +1,77 @@
 var carShowRoom = {
-    toyota: {
+    "Toyota": {
         toyotaRush: {
             brandName: "Toyota Rush",
             engine: "1496 cc",
             model: "2024",
-            price: " 83.3 lacs rs",
+            price: "PKR 83.3 lacs",
             img : "./images/rush.jpg"
         },
         toyota_Corolla_Cross: {
             brandName: "Toyota Corolla Cross",
             engine: "1798 cc",
             model: "2024",
-            price: "98.5 lacs rs",
+            price: "PKR 98.5 lacs",
             img : "./images/corolla.jpg"
         },
         toyota_Hilux: {
             brandName: "Toyota Hilux",
             engine: "2755 cc",
             model: "2024",
-            price: "1.54 crore",
+            price: "PKR 1.54 crore",
             img : "./images/Revo_-_PNG.png"
         },
         toyota_Fortuner: {
             brandName: "Toyota Fortuner",
             engine: "2755 cc",
             model: "2024",
-            price: "1.99 crore",
+            price: "PKR 1.99 crore",
             img : "./images/Fortuner_-_PNG.png"
         }
     },
-    suzuki: {
+    "Suzuki": {
         suzuki_Alto: {
             brandName: "Suzuki Alto",
             engine: "658 cc",
             model: "2024",
-            price: "29.4 lacs ",
+            price: "PKR 29.4 lacs",
             img : "./images/Suzuki_Alto_-_PNG.png"
         },
         suzuki_Cultus: {
             brandName: "Suzuki Cultus",
             engine: "998 cc",
             model: "2024",
-            price: "43.7 lacs ",
+            price: "PKR 43.7 lacs ",
             img : "./images/Suzuki_Cultus_-_PNG.png"
         },
         suzuki_Wagon: {
             brandName: "Suzuki Wagon",
             engine: "998 cc",
             model: "2024",
-            price: "37.4 lacs ",
+            price: "PKR 37.4 lacs",
             img : "./images/Wagon-R.jpg"
         },
         suzuki_Swift: {
             brandName: "Suzuki Swift",
             engine: "1200 cc",
             model: "2024",
-            price: "50.4 lacs ",
+            price: "PKR 50.4 lacs",
             img : "./images/SWIFT.jpg"
         }
     },
-    honda: {
+    "Honda": {
         honda_City: {
             brandName: "Honda City",
             engine: "1199 cc to 1497 cc",
             model: "2024",
-            price: "58.5 lacs ",
+            price: "PKR 58.5 lacs",
             img : "./images/Honda_City_Front.jpg"
         },
         honda_BRV: {
             brandName: "Honda BRV",
             engine: "1497 cc",
             model: "2024",
-            price: "63.0 lacs ",
+            price: "PKR 63.0 lacs",
             img : "./images/Honda_BRV_Front.jpg"
         },
         honda_HR_V: {
@@ -91,39 +91,44 @@ var carShowRoom = {
     }
 }
 
-
+// get element from select dropdown 1st
 var selectCompany = document.getElementById("carsCompany");
-
+// get element from select dropdown 2nd
 var selectCar = document.getElementById("carsType");
 
 
-
-for ( key in carShowRoom) {
+// for in loop for store first keys in first dropdown
+for (var key in carShowRoom) {
     selectCompany.innerHTML += `<option value="${key}">${key}</option>`;
 }
 
+// add a event listener "change" on first dropdown for get value when change in first dropdown
 selectCompany.addEventListener('change', function() {
     var selectedCompany = this.value;
-    selectCar.innerHTML = '<option value="" disabled selected hidden>Select car type</option>';
-    
     // Populate the second dropdown with car models based on the selected company
     for (var model in carShowRoom[selectedCompany]) {
         selectCar.innerHTML += `<option value="${model}">${carShowRoom[selectedCompany][model].brandName}</option>`;
     }
 });
 
-// Event listener for changes in the second dropdown
+// Event listener for changes in the second dropdown when this function listen any change in second dropdown it will EXECUTE 
 selectCar.addEventListener('change', function() {
+    // whene this execute it will call updateCarInfo function
     updateCarInfo();
 });
 
+// updateCarInfo function for show searched car 
 function updateCarInfo() {
+    // first we will get first dropdown value 
     var selectedCompany = selectCompany.value;
+    // now we will get second dropdown value
     var selectedCar = selectCar.value;
-
+   // in if statement if selectedCar found then it will execute 
     if (selectedCar) {
+        // when it execute it will stor car name from object
         var car = carShowRoom[selectedCompany][selectedCar];
 
+        // now we will show result in our html page using template string 
         carInfoContainer.innerHTML = `
             <div class="card">
             <img src="${car.img}" alt="${car.brandName}">
