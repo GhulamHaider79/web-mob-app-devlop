@@ -1,0 +1,105 @@
+body{
+    background-color: #80807f;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d5d4d4;
+    background-color: #888887;
+    
+}
+.navbar h1{
+    color: #fff;
+    margin-left: 10px;
+}
+.navbar a{
+    margin-right: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+.goToHome a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.search_cars{
+    display: flex;
+    gap: 4rem;
+}
+.search_cars select{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+#carInfoContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+#carInfoContainer h1{
+color: #18102a;
+}
+.card {
+    
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fdfafa;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 8px 0;
+}
+
+.card img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin-top: 16px;
+}
+
+#carInfoContainerAll{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    
+}
+
+.cardAllCars{
+    width: 350px;
+    border: 1px solid #bab9b9;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fdfafa;
+}
+
+.cardAllCars h2 {
+    margin-top: 0;
+}
+
+.cardAllCars p {
+    margin: 8px 0;
+}
+
+.cardAllCars img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin-top: 16px;
+}
