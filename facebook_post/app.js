@@ -32,13 +32,32 @@ document.querySelector('#addEmojis').addEventListener('mouseleave', function (e)
 
 // function for add emojis in text area but not works
 function addEmojis (){
-    let writePostEmojis = document.querySelector('#writePost')
+    let writePostEmojis = document.querySelector('#writePost');
+    // Get the emoji character from the clicked element
+    let emojiCharacter = event.target.innerText;
+
+    // Get the current cursor position in the textarea
+    let startPos = writePostEmojis.selectionStart;
+    let endPos = writePostEmojis.selectionEnd;
+
+   /* Insert the emoji character at the cursor position
+    .substring(start, end): This is a method that extracts a section of a string and returns a new 
+    string. It takes two parameters: start, the position where to begin the extraction
+    (inclusive), and end, the position where to end the extraction (exclusive).
+    If end is not specified, the extraction will include all characters
+    from start to the end of the string*/
+    
+    let textBeforeCursor = writePostEmojis.value.substring(0, startPos);
+    let textAfterCursor = writePostEmojis.value.substring(endPos, writePostEmojis.value.length);
+    writePostEmojis.value = textBeforeCursor + emojiCharacter + textAfterCursor;
+
+    // Move the cursor position after the inserted emoji
+    let newPos = startPos + emojiCharacter.length;
+    writePostEmojis.setSelectionRange(newPos, newPos);
    
-    writePostEmojis = event.target.value
-    // console.log(writePostEmojis);
-   
-    // console.log(event.target.value);
+    //  console.log(event.target.value);
 }
+
 
 // function for text bold and normal
 document.querySelector('.bold').addEventListener('click', function (e){

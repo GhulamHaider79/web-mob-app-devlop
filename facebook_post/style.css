@@ -1,5 +1,9 @@
 body{
-  background-color: rgb(101, 101, 253);
+  background-color: rgb(121, 121, 147);
+}
+.navbar{
+  background-color: rgb(112, 112, 145);
+  border-bottom: 1px solid rgb(240, 237, 237);
 }
 .container{
     display: flex;
