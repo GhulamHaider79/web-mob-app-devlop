@@ -34,14 +34,71 @@ body{
     height: 2rem;
     border-radius: 10px;
 }
+   
+
+@media screen and (max-width: 768px) {
+    .navbar h1{
+        font-size: 1rem;
+    }
+    .git{
+       display: none;
+    }
+    .goToHome a{
+        
+        font-size: 1rem;
+    }
+    .search_cars{
+        display: flex;
+        gap: 1rem;
+    }
+    .search_cars select{
+        width: 7rem;
+        height: 1.6rem;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+}
+@media screen and (max-width: 468px) {
+    .navbar {
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar h1{
+        font-size: 1rem;
+    }
+   
+    .goToHome a{
+        
+        display: none
+    }
+    .search_cars{
+        display: flex;
+        gap: .5rem;
+    }
+    .search_cars select{
+        width: 7.6rem;
+        height: 1.2rem;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+}
 #carInfoContainer{
     display: flex;
     justify-content: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
+
 #carInfoContainer h1{
 color: #18102a;
+}
+@media screen and (max-width: 456px) {
+    #carInfoContainer h1{
+       text-align: center
+        }
 }
 .card {
     
@@ -67,6 +124,31 @@ color: #18102a;
     height: auto;
     display: block;
     margin-top: 16px;
+}
+@media screen and (max-width: 500px) {
+    .card {
+    
+        width: 80%;
+        
+    }
+    
+   
+    
+    .card p {
+        margin: 8px 0;
+    }
+    
+    .card img {
+        width: 320px;
+       
+    }
+}
+@media screen and (max-width: 380px) {
+
+    .card img {
+        width: 17.5rem;
+       
+    }
 }
 
 #carInfoContainerAll{

@@ -329,6 +329,7 @@ margin: auto;
 .html h1 span{
     font-size: 2.5rem;
 }
+
 .progress-bar {
     width: 100px;
     height: 100px;
@@ -379,6 +380,26 @@ margin: auto;
     left: 10%;
     color: #fff;
   }
+  @media screen and (max-width: 350px) {
+    .html{
+        width: 85%px;
+       
+  }
+  .html h1{
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1rem;
+}
+.html h1 span{
+    font-size: 1.8rem;
+}
+.progress-bar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+   
+  }
+}
   .portfolio_section{
     width: 100%;
     background-color: #949393;
@@ -497,4 +518,8 @@ margin: auto;
     }
   }
 
-
+  @media screen and (max-width: 350px) {
+    .contect_div{
+        width: 85%;
+    }
+  }
