@@ -73,34 +73,21 @@ body{
      /*toggle nav bar*/
      /* Style the navigation menu */
 .topnav {
-    display: flex;
-    justify-content: space-between;
+    overflow: hidden;
     background-color: rgb(68, 68, 67);
-    
     position: relative;
   }
   
   /* Hide the links inside the navigation menu (except for logo/home) */
- 
-  #myLinks {
-    
+  .topnav #myLinks {
     display: none;
-   
+    
   }
  .show{
-    width: 20%;
-   background-color: #403f3f;
-  
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    position: absolute;
-    top: 2;
-    right: 0;
-    transform: translateX(0);
+    align-items: end;
  }
- 
   /* Style navigation menu links */
   .topnav a {
     color: white;
@@ -110,9 +97,8 @@ body{
     display: block;
   }
   
-  
   /* Style the hamburger menu */
-  .topnav  a.icon {
+  .topnav a.icon {
     background: black;
     display: block;
     position: absolute;
