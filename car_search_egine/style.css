@@ -63,7 +63,7 @@ color: #18102a;
 }
 
 .card img {
-    max-width: 350px;
+    width: 400px;
     height: auto;
     display: block;
     margin-top: 16px;
