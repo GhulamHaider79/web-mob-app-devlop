@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body{
     padding: 0;
     margin: 0;
     background-color: rgb(41, 41, 40); 
+    font-family: "PT Sans", sans-serif;
 }
+
 .main-div{
     width: 100%;
     display: flex;
@@ -17,7 +20,7 @@ body{
         width: 100%;
         display: flex;
        justify-content: space-between;
-       
+       font-family: "PT Sans", sans-serif;
        align-items: center;
        background-color: rgb(68, 68, 67);
        border-bottom: 1px solid #c0bebe;
@@ -28,67 +31,241 @@ body{
         line-height: 2rem;
         margin-left: 5px;
     }
-    .navbar>a{
+    .navbar_second_section{
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+   
+    .navbar_second_section ul{
+        display: flex;
+        gap: 5rem;
+    }
+    .navbar_second_section ul li {
+        list-style: none;
+        color: #fff;
+    }
+    .navbar_second_section ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .navbar_second_section>a{
         text-decoration: none;
         font-size: 2.5rem;
         color: #fff;
         margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .navbar_second_section a button{
+        width: 6rem;
+        height: 2rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow: 1px 1px 5px 3px #fff;
+        background-color: rgb(214, 211, 14);
+        cursor: pointer;
+    }
+
+     /*toggle nav bar*/
+     /* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(68, 68, 67);
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+    
+  }
+ .show{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+ }
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border-bottom: 1px solid #c0bebe;
+  }
+  /* toggle navbar style end */
+  @media screen and (min-width: 701px) {
+    .topnav{
+        display: none;
+    }
+}
+    @media screen and (max-width: 960px) {
+        .navbar_second_section{
+            
+            gap: 2rem;
+            width: 70%;
+            
+        }
+        .navbar_second_section ul{
+           
+            gap: 2rem;
+        }
+        
+    @media screen and (max-width: 700px) {
+        .navbar{
+            display: none;
+        }
+        .topnav{
+            display: block;
+        }
+        .web_developer_main{
+            margin-top: 20rem;
+        }
+    }
     }
 .web_developer_main{
     display: flex;
     justify-content: center;
     width: 100%;
+    font-family: "PT Sans", sans-serif;
+    height: 400px;
    
 }
 .web_developer{
     width: 45%;
     display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    
+}
+.photo_container{
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-
+   
+   position: relative;
+  
 }
 .web_developer img{
-    width: 250px;
-    height: 250px;
-    border-radius: 45%;
+    width: 550px;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    
+    right: 2;
+    
 }
+
+.pic_background{
+    width: 300px;
+    height: 280px;
+    border-radius: 50%;
+    background-color: rgb(214, 211, 14);
+    box-shadow: 0 0 5px 8px #ababab;
+    outline: 1px solid rgb(224, 222, 222);
+    margin: auto;
+    z-index: -1;
+}
+
 .web_developer_details{
     width: 48%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-   align-items: center;
+    justify-content: center;
+    align-items: center;
+    
 }
-.web_developer_details h1{
+
+.web_developer_details p{
     color: #fff;
-    font-size: 2rem
+    font-size: 1.5rem;
+   
+   
 }
-.description p{
-    color: #fff;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    word-spacing: 0.8rem;
+.hello{
+    font-size: 2rem;
+   
 }
-.list{
+.name{
+    font-size: 4.2rem;
+    color: rgb(214, 211, 14);
+}
+
+.hire_btn_section{
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
+    align-items: end;
+
 }
-.list ul li{
+.btn_hire{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 5px 3px #fff;
+    background-color: rgb(214, 211, 14);
+    cursor: pointer;
+}
+.hire_btn_section a{
+    text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 768px) {
     .web_developer_main{
         
         flex-wrap: wrap-reverse;
         align-items: center;
         gap: 2rem;
+        margin-top: 20rem;
     }
     .web_developer{
-        width: 85%;
+        width: 100%;
+    }
+    .photo_container{
+        width: 100%;
     }
     .web_developer img{
         width: 90%;
-        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+       
+    }
+    .pic_background{
+        width: 50%;
+        height: 350px;
+position: static;
+margin: auto;
     }
     .web_developer_details{
         width: 85%;
@@ -97,29 +274,138 @@ body{
         text-align: center;
     }
   }
-.container_for_heading{
+.container_for_heading, .portfolio_section{
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 5rem;
     
 }
-
-.course-heading-container{
+.expertise{
+    text-align: center;
+    color: #fff;
+}
+.expertise span{
+    font-size: 2.5rem;
+}
+.skills_section{
     width: 80%;
     background-color: rgb(68, 68, 67);
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 3rem;
     border-radius: 10px;
     padding: 1rem;
     border: 1px solid #c0bebe;
     box-shadow: 2px 2px 5px 2px #b3b2b2;
 }
-.course-heading-container h1{
-    color: #fff;
+.html{
+    width: 335px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(105, 105, 104);
+    border-radius: 5px;
+    gap: 2rem;
+}
+.html h1{
+    font-size: 4rem;
     text-align: center;
+    line-height: 1rem;
+}
+.html h1 span{
+    font-size: 2.5rem;
+}
+.progress-bar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #3498db var(--progress),
+      transparent var(--progress)
+    );
+    transform: rotate(0deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .percentage {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+  }
+  .percentage_boots{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+  }
+  .percentage_js{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+  }
+  .progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: rgb(105, 105, 104);
+    top: 10%;
+    left: 10%;
+    color: #fff;
+  }
+  .portfolio_section{
+    width: 100%;
+    background-color: #949393;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+   
+   
+  }
+  .portfolio_heading{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
+    margin-top: 10rem;
+   
+  }
+  .portfolio_heading p{
+    text-align: center;
+  }
+  .portfolio_heading p span{
+    font-size: 2rem;
+  }
+.portfolio_show{
+    width: 100%;
+    background-color: rgb(68, 68, 67);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  
+  
+   
 }
 .three_website_control{
     display: flex;
@@ -127,7 +413,14 @@ body{
     justify-content: space-around;
     gap: 2rem;
 }
+.contnt_manage, .contnt_manage_second{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
 .contect_div{
+    width: 350px;
    background-color: rgb(227, 253, 253, 0.5);
    border-radius: 10px;
    padding: 0.8rem;
