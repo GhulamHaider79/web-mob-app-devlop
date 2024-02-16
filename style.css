@@ -3,7 +3,8 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(41, 41, 40); 
-    font-family: "PT Sans", sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 .main-div{
@@ -402,7 +403,7 @@ margin: auto;
 }
   .portfolio_section{
     width: 100%;
-    background-color: #949393;
+    background-color: #f8f6f6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -421,9 +422,13 @@ margin: auto;
   }
   .portfolio_heading p{
     text-align: center;
+    color: #000;
+    text-shadow: 1px 1px rgb(214, 211, 14);
   }
   .portfolio_heading p span{
     font-size: 2rem;
+    text-shadow: 1px 1px #0b0a0a;
+    color: rgb(214, 211, 14);
   }
 .portfolio_show{
     width: 100%;
@@ -432,8 +437,8 @@ margin: auto;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-  
-  
+  padding-top: 2rem;
+  padding-bottom: 2rem;
    
 }
 .three_website_control{
@@ -523,3 +528,140 @@ margin: auto;
         width: 85%;
     }
   }
+
+  /*design testimonial section */
+  .testimonial{
+    width: 100%;
+    display: flex;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /* testimonial image section */
+
+  .testimonial_costumers_images{
+    width: 50%;
+    position: relative;
+  }
+.testimonial_costumers_images .first_img{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    left: 18%;
+}
+.testimonial_costumers_images .second_img{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+}
+.testimonial_costumers_images .third_img{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+.testimonial_costumers_images .fourth_img{
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+}
+
+/* testimonial comment section */
+
+.testimonial_comments{
+    width: 50%;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+.testimonial_comments span{
+    line-height: 0px;
+}
+.testimonial_comments h1 {
+    color: rgb(214, 211, 14);
+    line-height: 1rem;
+}
+.testimonial_comments p {
+   width: 80%;
+}
+.testimonial_comments  .arrow_btn{
+    display: flex;
+    gap: 10px;
+    
+}
+.testimonial_comments  .arrow_btn span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(214, 211, 14);
+}
+@media screen and (max-width: 786px) {
+    .testimonial{
+       flex-direction: column;
+       justify-content: space-between;
+       align-content: space-between;
+      }
+      .testimonial_costumers_images{
+        width: 100%;
+        position: relative;
+        height: 300px;
+      }
+      .testimonial_costumers_images .first_img{
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+    }
+    .testimonial_costumers_images .second_img{
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 15%;
+        left: 20%;
+    }
+    .testimonial_costumers_images .third_img{
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 65%;
+    }
+    .testimonial_costumers_images .fourth_img{
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 60%;
+        left: 35%;
+    }
+    .testimonial_comments{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .testimonial_comments h1{
+        
+        text-align: center;
+        line-height: 2rem;
+    }
+    .testimonial_comments p{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .arrow_btn{
+        margin-top: 2rem;
+    }
+}
