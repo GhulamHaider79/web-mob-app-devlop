@@ -443,22 +443,21 @@ margin: auto;
 }
 .three_website_control{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
     gap: 2rem;
 }
 .contnt_manage, .contnt_manage_second{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+   justify-content: center;
     gap: 2rem;
 }
 .contect_div{
-    width: 350px;
+    width: 250px;
    background-color: rgb(227, 253, 253, 0.5);
    border-radius: 10px;
-   padding: 0.8rem;
+   padding: 0.5rem;
    box-shadow: 2px 5px rgb(254, 232, 232);
    
 }
@@ -469,17 +468,32 @@ margin: auto;
     gap: 1rem;
     text-decoration: none;
     margin-bottom: 0.8rem;
+    
 }
 .contect_div>a>img{
-    width: 250px;
+    width: 245px;
     border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(214, 211, 14);
 }
-.contect_div>a>span{
-    
-    color: #0b0a0a;
-    font-size: 1.5rem;
-    font-weight: bold;
+.contect_div h1 a {
+ text-decoration: none;
+ color: #0b0a0a;
 }
+.contect_div p{
+    color: #fff;
+}
+.contect_div a .visit_to_site{
+    width: 12rem;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 5px 3px #fff;
+    background-color: rgb(214, 211, 14);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
 
 .reveal{
     position: relative;
@@ -664,4 +678,179 @@ margin: auto;
     .arrow_btn{
         margin-top: 2rem;
     }
+}
+
+/* contact section*/
+
+.contact_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.get_in_touch p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.get_in_touch p .any_question{
+    font-size: 2rem;
+}
+.form_section{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.contact_methods{
+    width: 20%;
+    background-color: #f8f6f6;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 1px 1px 5px 2px rgb(214, 211, 14);
+}
+.contact_methods .email, .whatsapp{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact_methods .email h1, .whatsapp h1{
+ color: rgb(214, 211, 14);
+}
+.contact_methods .email a, .whatsapp a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+
+}
+.form_for_questions{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: space-between;
+}
+.form_for_questions form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: center;
+    
+}
+.form_for_questions form input{
+    width: 15rem;
+    min-height: 1.5rem;
+    box-shadow: 0px 0px 5px 12px #363636;
+    border-radius: 5px;
+}
+.form_for_questions form input::placeholder{
+    padding-left: 10px;
+}
+.form_for_questions form textarea{
+    width: 32.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 12px #363636;
+    overflow: hidden;
+    outline: none;
+}
+.form_for_questions form textarea::placeholder{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 1rem;
+}
+.form_for_questions button {
+    margin-left: 2.2rem;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 5px 3px #fff;
+    background-color: rgb(214, 211, 14);
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+    .contact_methods{
+        width: 25%;
+        
+    }
+    .form_for_questions{
+        width: 45%;
+    }
+    .form_for_questions form input{
+        width: 10rem;
+       
+    }
+    .form_for_questions form textarea{
+        width: 23rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .form_section{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    }
+    .contact_methods{
+        width: 80%;
+        display: flex;
+        gap: 2rem;
+    }
+    .form_for_questions{
+        width: 80%;
+        gap: 2rem;
+    }
+    .form_for_questions form input{
+        width: 15rem;
+       
+    }
+    .form_for_questions form textarea{
+        width: 33rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .get_in_touch p {
+        
+        text-align: center;
+        
+    }
+    
+    .form_section{
+        
+        gap: 2.5rem;
+        }
+   
+    .contact_methods{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    .form_for_questions{
+        width: 80%;
+        gap: 2rem;
+    }
+    .form_for_questions form input{
+        width: 15rem;
+       
+    }
+    .form_for_questions form textarea{
+        width: 15rem;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+    
+    .contact_methods .email a  {
+     max-width: 5rem;
+        font-size: 13px;
+    }
+    .contact_methods .email a span {
+        
+           font-size: 1rem;
+       }
 }
