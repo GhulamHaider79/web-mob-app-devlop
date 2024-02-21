@@ -23,7 +23,7 @@ body{
 }
 .goToHome a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .search_cars{
     display: flex;
@@ -33,9 +33,77 @@ body{
     width: 10rem;
     height: 2rem;
     border-radius: 10px;
+    
 }
+.navbar button{
+    width: 6rem;
+        height: 2rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow: 1px 1px 5px 3px #fff;
+        background-color: rgb(214, 211, 14);
+        cursor: pointer;
+} 
+.hamburger{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.hamburger .first_span, .second_span, .third_span{
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+}
+.nav_mobile{
+    display: flex;
+    justify-content: flex-end;
+}
+.search_cars_mobile{
+    display: none;
+}
+.search_cars_mobile_show{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
    
+}
+.search_cars_mobile select, .goToHome_link {
+    width: 7rem;
+    height: 2rem;
+}
+.search_cars_mobile button{
+    width: 7rem;
+    height: 2rem;
+}
 
+.goToHome_link{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@media screen and (min-width: 769px) {
+    .hamburger{
+        display: none;
+    }
+}
+@media screen and (max-width: 969px) {
+    
+    
+    .search_cars{
+        display: flex;
+        gap: 0.7rem;
+    }
+      
+}
 @media screen and (max-width: 768px) {
     .navbar h1{
         font-size: 1rem;
@@ -43,20 +111,15 @@ body{
     .git{
        display: none;
     }
-    .goToHome a{
+    .goToHome {
         
-        font-size: 1rem;
+       display: none;
     }
     .search_cars{
-        display: flex;
-        gap: 1rem;
+        display: none;
+        
     }
-    .search_cars select{
-        width: 7rem;
-        height: 1.6rem;
-        border-radius: 10px;
-        overflow: hidden;
-    }
+    
     
 }
 @media screen and (max-width: 468px) {
@@ -170,7 +233,9 @@ color: #18102a;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     background-color: #fdfafa;
 }
-
+.cardAllCars_hide{
+    display: none;
+}
 .cardAllCars h2 {
     margin-top: 0;
 }

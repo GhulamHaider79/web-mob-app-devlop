@@ -98,56 +98,9 @@ var selectCompany = document.getElementById("carsCompany");
 var selectCar = document.getElementById("carsType");
 
 
-// for in loop for store first keys in first dropdown
-for (var key in carShowRoom) {
-    selectCompany.innerHTML += `<option value="${key}">${key}</option>`;
-}
-
-// add a event listener "change" on first dropdown for get value when change in first dropdown
-selectCompany.addEventListener('change', function() {
-    var selectedCompany = this.value;
-    // Populate the second dropdown with car models based on the selected company
-    for (var model in carShowRoom[selectedCompany]) {
-        selectCar.innerHTML += `<option value="${model}">${carShowRoom[selectedCompany][model].brandName}</option>`;
-    }
-});
-
-// Event listener for changes in the second dropdown when this function listen any change in second dropdown it will EXECUTE 
-selectCar.addEventListener('change', function() {
-    // whene this execute it will call updateCarInfo function
-    updateCarInfo();
-});
-
-// updateCarInfo function for show searched car 
-function updateCarInfo() {
-    // first we will get first dropdown value 
-    var selectedCompany = selectCompany.value;
-    // now we will get second dropdown value
-    var selectedCar = selectCar.value;
-   // in if statement if selectedCar found then it will execute 
-    if (selectedCar) {
-        // when it execute it will stor car name from object
-        var car = carShowRoom[selectedCompany][selectedCar];
-
-        // now we will show result in our html page using template string 
-        carInfoContainer.innerHTML = `
-            <div class="card">
-            <img src="${car.img}" alt="${car.brandName}">
-                <h2>${car.brandName}</h2>
-                <p>Engine: ${car.engine}</p>
-                <p>Model: ${car.model}</p>
-                <p>Price: ${car.price}</p>
-                
-            </div>`;
-    } else {
-        carInfoContainer.innerHTML = ""; // Clear the container if no car is selected
-    }
-}
 
 
 
-
-document.addEventListener("DOMContentLoaded", function() {
     // Function to generate cards for all cars
     function generateAllCarCards() {
         var allCards = '';
@@ -165,13 +118,69 @@ document.addEventListener("DOMContentLoaded", function() {
                 
             }
         }
-        return allCards;
+        carInfoContainerAll.innerHTML = allCards;
     }
 
     // Display all car cards on page load
-    var carInfoContainerAll = document.getElementById("carInfoContainerAll");
-    carInfoContainerAll.innerHTML = generateAllCarCards();
+    
+     generateAllCarCards();
+
+
+// for in loop for store first keys in first dropdown
+for (var key in carShowRoom) {
+    selectCompany.innerHTML += `<option value="${key}">${key}</option>`;
+}
+
+// add a event listener "change" on first dropdown for get value when change in first dropdown
+selectCompany.addEventListener('change', function() {
+    var selectedCompany = this.value;
+
+    selectCar.innerHTML = `<option value="" disabled selected hidden>Select Model</option>`
+    // Populate the second dropdown with car models based on the selected company
+    for (var model in carShowRoom[selectedCompany]) {
+
+        selectCar.innerHTML += `<option value="${model}">${carShowRoom[selectedCompany][model].brandName}</option>`;
+    }
 });
 
+// Event listener for changes in the second dropdown when this function listen any change in second dropdown it will EXECUTE 
+search_btn.addEventListener('click', function() {
+     
+// first we will get first dropdown value 
+var selectedCompany = selectCompany.value;
+// now we will get second dropdown value
+var selectedCar = selectCar.value;
+// in if statement if selectedCar found then it will execute 
+if (selectedCar) {
+    // when it execute it will stor car name from object
+    var car = carShowRoom[selectedCompany][selectedCar];
+
+    // now we will show result in our html page using template string 
+    carInfoContainer.innerHTML = `
+        <div class="card">
+        <img src="${car.img}" alt="${car.brandName}">
+            <h2>${car.brandName}</h2>
+            <p>Engine: ${car.engine}</p>
+            <p>Model: ${car.model}</p>
+            <p>Price: ${car.price}</p>
+            
+        </div>`;
+} else {
+    carInfoContainer.innerHTML = ""; // Clear the container if no car is selected
+}
+carInfoContainerAll.innerHTML = ''
+});
+
+clear_search_btn.addEventListener('click', function(){
+    selectCompany.innerHTML = ''
+    selectCompany.innerHTML = `<option value="" disabled selected hidden>Select Brand</option>`
+    for (var key in carShowRoom) {
+        selectCompany.innerHTML += `<option value="${key}">${key}</option>`;
+    }
+  
+    selectCar.innerHTML = `<option value="" disabled selected hidden>Select Model</option>`
+    generateAllCarCards();
+    carInfoContainer.innerHTML = ""
+})
  
 
